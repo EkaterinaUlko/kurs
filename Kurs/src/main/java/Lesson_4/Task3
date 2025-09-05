@@ -1,0 +1,75 @@
+public class Animal
+{
+    String name;
+    int animalCount = 0;
+
+    public void run(int s)
+    {
+        System.out.println(name + " пробежал " + s + " м.");
+    }
+    public void swim(int s)
+    {
+        System.out.println(name + " проплыл " + s + " м.");
+    }
+}
+public class Cat extends Animal
+{
+    int catCount = 0;
+
+    public Cat(String name)
+    {
+        super(name);
+        catCount++;
+    }
+    @Override
+    public void run(int s)
+    {
+        if (s <= 200)
+        {
+            super.run(s);
+        }
+        else
+        {
+            System.out.println(name + " не может пробежать " + s + " м. (максимум 200 м.)");
+        }
+    }
+    @Override
+    public void swim(int s)
+    {
+        System.out.println(name + " не умеет плавать!");
+    }
+}
+public class Gog extends Animal
+{
+    int dogCount = 0;
+
+    public Dog(String name)
+    {
+        super(name);
+        dogCount++;
+    }
+    @Override
+    public void run(int s)
+    {
+        if (s <= 500)
+        {
+            super.run(s);
+        }
+        else
+        {
+            System.out.println(name + " не может пробежать " + s + " м. (максимум 500 м.)");
+        }
+    }
+    @Override
+    public void swim(int s)
+    {
+        if (s <= 10)
+        {
+            super.swim(s);
+        }
+        else
+        {
+            System.out.println(name + " не может проплыть " + s + " м. (максимум 10 м.)");
+        }
+    }
+}
