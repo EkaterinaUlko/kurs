@@ -64,11 +64,11 @@ public class Main {
             return false;
     }
 
-    public static void repeatString(String stroka, int a)
+    public static void repeatString(String str, int a)
     {
         for (int i = 0; i < a; i++)
         {
-            System.out.println(stroka);
+            System.out.println(str);
         }
     }
 
