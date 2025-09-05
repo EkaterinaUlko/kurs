@@ -1,0 +1,146 @@
+public class Main {
+
+    public static void printThreeWords()
+    {
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
+    }
+
+    public static void checkSumSign()
+    {
+        int a = 1;
+        int b = 0;
+        int sum = a + b;
+        if (sum >= 0)
+            System.out.println("Сумма положительная");
+        else
+            System.out.println("Сумма отрицательная");
+    }
+
+    public static void printColor()
+    {
+        int value = 101;
+        if (value <= 0)
+            System.out.println("Красный");
+        else if (value <= 100)
+            System.out.println("Желтый");
+        else
+            System.out.println("Зеленый");
+    }
+
+    public static void compareNumbers()
+    {
+        int a = 3;
+        int b = 3;
+        if (a >= b)
+            System.out.println("a >= b");
+        else
+            System.out.println("a < b");
+    }
+
+    public static boolean checkSumInRange(int a, int b)
+    {
+        int sum = a + b;
+        if (sum >= 10 & sum <= 20)
+            return true;
+        else
+            return false;
+    }
+
+    public static void printNumberSign(int a)
+    {
+        if (a >= 0)
+            System.out.println("Число положительное");
+        else
+            System.out.println("Число отрицательное");
+    }
+
+    public static boolean isLeapNumberSign(int a)
+    {
+        if (a >= 0)
+            return true;
+        else
+            return false;
+    }
+
+    public static void repeatString(String str, int a)
+    {
+        for (int i = 0; i < a; i++)
+        {
+            System.out.println(str);
+        }
+    }
+
+    public static boolean isLeapYear(int year)
+    {
+        if ((year % 4 == 0 & year % 100 == 0) || year % 400 == 0)
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String[] args) {
+        printThreeWords();
+        checkSumSign();
+        printColor();
+        compareNumbers();
+        System.out.println(checkSumInRange(5,5));
+        printNumberSign(2);
+        System.out.println(isLeapNumberSign(2));
+        repeatString("privet", 3);
+        System.out.println(isLeapYear(2025));
+        int[] mas = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0 };
+        for (int i = 0; i < mas.length; i++)
+        {
+            if (mas[i] == 0)
+                System.out.print("1 ");
+            else
+                System.out.print("0 ");
+        }
+        System.out.println();
+        int[] sto = new int[100];
+        for (int i = 0; i < 100; i++)
+        {
+            sto[i] = i;
+            System.out.print(sto[i] + " ");
+        }
+        System.out.println();
+        int[] mas2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < mas2.length; i++)
+        {
+            if (mas2[i] < 6)
+                mas2[i] *= 2;
+            System.out.print(mas2[i] + " ");
+        }
+        System.out.println();
+        int[][] square = new int[50][50];
+        for (int i = 0; i < 50; i++)
+        {
+            for (int j = 0; j < 50; j++)
+            {
+                if (i == j || i + j == 50)
+                    square[i][j] = 1;
+                else
+                    square[i][j] = 0;
+                System.out.print(square[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int[] mas3 = lenInitialValue(10, 1);
+        for (int i = 0; i < mas3.length; i++)
+        {
+            System.out.print(mas3[i] + " ");
+        }
+    }
+    public static int[] lenInitialValue(int len, int initialValue)
+    {
+        int[] mas = new int[len];
+        for (int i = 0; i < mas.length; i++)
+        {
+            mas[i] = initialValue;
+        }
+        return mas;
+    }
+}
