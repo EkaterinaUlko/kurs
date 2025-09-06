@@ -1,6 +1,8 @@
+package Lesson_3;
+
 public class Main {
-    public static void main(String[] args) {
-        public class Product
+
+        public static class Product
         {
             private String name;
             private String dateOfManufacture;
@@ -28,6 +30,7 @@ public class Main {
                 System.out.println("Статус бронирования: " + isReserved);
             }
         }
+    public static void main(String[] args) {
         Product[] productsArray = new Product[5];
 
         productsArray[0] = new Product("Samsung S25 Ultra", "01.02.2025", "Samsung Corp.", "Korea", 5599, true);
@@ -35,8 +38,8 @@ public class Main {
         productsArray[2] = new Product("Xiaomi 15 Ultra", "20.04.2025", "Xiaomi Corporation", "China", 4999.99, true);
         productsArray[3] = new Product("Google Pixel 9", "10.05.2025", "Google LLC", "USA", 6999.99, false);
         productsArray[4] = new Product("OnePlus 12", "25.06.2025", "OnePlus Technologies", "China", 5999.99, true);
-
-        public class Park
+    }
+        public static class Park
         {
             public class Attraction {
                 private String name;
@@ -44,6 +47,4 @@ public class Main {
                 private double price;
             }
         }
-    }
 }
-

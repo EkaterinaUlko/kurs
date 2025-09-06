@@ -1,3 +1,5 @@
+package Lesson_2;
+
 public class Main {
 
     public static void printThreeWords()
@@ -144,3 +146,4 @@ public class Main {
         return mas;
     }
 }
+
