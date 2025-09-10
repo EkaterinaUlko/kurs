@@ -65,5 +65,9 @@ public class Main
         {
             System.err.println("Ошибка данных в массиве: " + e.getMessage());
         }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.err.println("Ошибка выхода за границы массива: " + e.getMessage());
+        }
     }
 }
